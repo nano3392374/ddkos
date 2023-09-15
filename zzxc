@@ -1,0 +1,68 @@
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local warning = Instance.new("Frame")
+local YesButton = Instance.new("TextButton")
+
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+warning.Name = "warning"
+warning.Parent = ScreenGui
+warning.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+warning.BorderColor3 = Color3.fromRGB(105, 105, 105)
+warning.BorderSizePixel = 2
+warning.Position = UDim2.new(0.117414258, -124, 1.12884617, -132)
+warning.Size = UDim2.new(0, 115, 0, 21)
+
+YesButton.Name = "YesButton"
+YesButton.Parent = warning
+YesButton.BackgroundColor3 = Color3.fromRGB(84, 255, 126)
+YesButton.BorderColor3 = Color3.fromRGB(105, 105, 105)
+YesButton.BorderSizePixel = 2
+YesButton.Position = UDim2.new(0.600070059, -59, 0.710027814, -12)
+YesButton.Size = UDim2.new(0, 96, 0, 15)
+YesButton.ZIndex = 99
+YesButton.Font = Enum.Font.Arcade
+YesButton.Text = "Yes"
+YesButton.TextColor3 = Color3.fromRGB(84, 84, 84)
+YesButton.TextScaled = true
+YesButton.TextSize = 14.000
+YesButton.TextWrapped = true
+
+
+local function ZRCR_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+    protect = false
+	spawn = false
+	script.Parent.warning.YesButton.MouseButton1Click:Connect(function()
+		if spawn == false then	
+		spawn = true
+		script.Parent.warning.YesButton.BackgroundColor3 = Color3.fromRGB(84, 255, 126)
+			repeat wait(1.5)
+			local place =  game.Players.LocalPlayer.PC["Box 1"]:GetChildren()
+			repeat wait() until place ~= 0
+				if spawn == true and  game:GetService("CoreGui").FinityUI.Container.Categories.Main.R.Console.Container["Waiting."].Title.Text ~= "Done!" and game.Players.LocalPlayer.PC:FindFirstChild("Box 1") then
+                   
+					for i, v in pairs(game.Players.LocalPlayer.PC["Box 1"]:GetChildren()) do
+						pcall(function()
+							repeat wait() until v.HeldItem ~= nil
+					if v:WaitForChild("HeldItem") ~= nil and v.HeldItem.Value == "" or v.HeldItem.Value == "Houndoomite" or v.HeldItem.Value == "Abomasite" or v.HeldItem.Value == "Kangaskhanite" or v.HeldItem.Value == "Diancite" or v.HeldItem.Value == "Audinite" or v.HeldItem.Value == "Aggronite" or v.HeldItem.Value == "Beedrillite" or v.HeldItem.Value == "Altarianite" or v.HeldItem.Value == "Audinite" or v.HeldItem.Value == "Glalitite" or v.HeldItem.Value == "Ampharosite" or v.HeldItem.Value == "Pinsirite" or v.HeldItem.Value == "Slowbronite" or v.HeldItem.Value == "Manectite" or v.HeldItem.Value == "Venusaurite" or v.HeldItem.Value == "Swampertite" or v.HeldItem.Value == "Tyranitarite" or v.HeldItem.Value == "Salamencite" or v.HeldItem.Value == "Sablenite" or v.HeldItem.Value == "Heracronite" or v.HeldItem.Value == "Lopunnite" or v.HeldItem.Value == "Latiosite" or v.HeldItem.Value == "Latiasite" or v.HeldItem.Value == "Houndoomite" or v.HeldItem.Value == "Lucarionite" or v.HeldItem.Value == "Metagrossite" or v.HeldItem.Value == "Steelixite" or v.HeldItem.Value == "Sharpedonite" or v.HeldItem.Value == "Sceptilite" or v.HeldItem.Value == "Pidgeotite" or v.HeldItem.Value == "Gyaradosite" or v.HeldItem.Value == "Medichamite" or v.HeldItem.Value == "Mawilite" or v.HeldItem.Value == "Gengarite" or v.HeldItem.Value == "Gardevoirite" or v.HeldItem.Value == "Galladite" or v.HeldItem.Value == "Charizardite Y" or v.HeldItem.Value == "Charizardite X" or v.HeldItem.Value == "Cameruptite" or v.HeldItem.Value == "Blazikenite" or v.HeldItem.Value == "Blastoisinite" or v.HeldItem.Value == "Absolite" or v.HeldItem.Value == "Alakazamite" or v.HeldItem.Value == "Banettite" or v.HeldItem.Value == "Aerodactylite" or v.HeldItem.Value == "Garchompite" or v.HeldItem.Value == "Scizorite" then
+								game:GetService("ReplicatedStorage").REvents.PC.Release:FireServer(v)
+							end
+						end)
+					end
+				end
+			until game:GetService("CoreGui").FinityUI.Container.Categories.Main.R.Console.Container["Waiting."].Title.Text == "Done!"
+			print("stope")
+		elseif spawn == true then
+			script.Parent.warning.YesButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+			spawn = false
+		end
+	
+	end)
+	
+	
+end
+coroutine.wrap(ZRCR_fake_script)()
