@@ -18,7 +18,7 @@ warning.Size = UDim2.new(0, 115, 0, 21)
 
 YesButton.Name = "YesButton"
 YesButton.Parent = warning
-YesButton.BackgroundColor3 = Color3.fromRGB(84, 255, 126)
+YesButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 YesButton.BorderColor3 = Color3.fromRGB(105, 105, 105)
 YesButton.BorderSizePixel = 2
 YesButton.Position = UDim2.new(0.600070059, -59, 0.710027814, -12)
