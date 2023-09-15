@@ -1,0 +1,46 @@
+pcall(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/8062SKaF", true))()
+end)
+local runService = game:GetService("RunService");
+local heartbeat = runService.Heartbeat;
+number = 0 
+heartbeat:Connect(function()
+
+coroutine.wrap(function()
+if game:GetService("CoreGui"):FindFirstChild("ScreenGui") then
+game:GetService("CoreGui"):FindFirstChild("ScreenGui"):Destroy()
+end
+end)()
+
+
+   if game:GetService("CoreGui").FinityUI and number <= 1000 then
+   pcall(function()
+   game:GetService("CoreGui").FinityUI.TextButton.Visible = false
+   
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.Amount.Title.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.Start.Title.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Title.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Sidebar.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Topbar.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Shadow.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Separator.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.R.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.Shiny.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.Aura.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.Form.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container["Bulk-Spawn is faster but may be detected"].Visible = false
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container["Bulk-Spawn"].Visible = false
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.Level.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.Box.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.Pokemon.Visible = false
+game:GetService("CoreGui").FinityUI.Container.Size = UDim2.new(0, 200, 0,100)
+game:GetService("CoreGui").FinityUI.Container.Categories.Size = UDim2.new(1, 0, 1,0)
+game:GetService("CoreGui").FinityUI.Container.Categories.Position = UDim2.new(1, 55, 0,5)
+game:GetService("CoreGui").FinityUI.Container.Position = UDim2.new(0, 105, 0,522)
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.Start.Position = UDim2.new(0, 0, 0,45)
+game:GetService("CoreGui").FinityUI.Container.Draggable = false
+game:GetService("CoreGui").FinityUI.Container.Categories.Main.L.Main.Container.UIListLayout:Destroy()
+number = number + 1
+end)
+end
+end);
